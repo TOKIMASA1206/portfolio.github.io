@@ -404,6 +404,19 @@ body.is-fixed {
 .page-bottom__item-text {
   font-size: 20px;
 }
+.page-bottom__item-link {
+  border: solid #fff 1px;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 22px;
+  color: #fff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+.page-bottom__item-link:hover {
+  color: #051D40;
+  background: #fff;
+}
 
 .footer {
   background-color: #fff;

@@ -467,8 +467,23 @@ body {
     font-size: 20px;
   }
 
+  &__item-link {
+    border: solid color.$white 1px;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 22px;
+    color:color.$white;
+    transition: color 0.3s;
+  }
+
+  &__item-link:hover{
+    color:color.$cl-navy;
+    background: color.$white ;
+  }
+
 
 }
+
 
 // footer
 .footer {
@@ -691,6 +706,7 @@ body {
     }
 
   }
+
 
 }
 

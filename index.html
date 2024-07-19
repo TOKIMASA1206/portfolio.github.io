@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 検索にヒットさせない -->
+    <meta name="robots" content="noindex" />
+
+    <title>ポートフォリオサイト</title>
+    <meta name="description" content="甲田時將のポートフォリオサイトです。" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo">
+            <a href="index.html">
+              Toki's <br />
+              Portfolio
+            </a>
+          </div>
+          <button
+            type="button"
+            id="js-button-drawer"
+            class="header__menu-button"
+          >
+            Menu
+          </button>
+
+          <div id="js-drawer" class="header__contents">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="#about" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="17"
+                        height="18"
+                        viewBox="0 0 17 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M13.8125 7.04143C13.8125 8.55504 13.3178 9.95324 12.4844 11.0876L16.6879 15.2657C17.1029 15.6779 17.1029 16.3473 16.6879 16.7595C16.2729 17.1717 15.5988 17.1717 15.1838 16.7595L10.9803 12.5814C9.83808 13.4124 8.43027 13.9005 6.90625 13.9005C3.09121 13.9005 0 10.8304 0 7.04143C0 3.25246 3.09121 0.182373 6.90625 0.182373C10.7213 0.182373 13.8125 3.25246 13.8125 7.04143ZM6.90625 11.79C7.53413 11.79 8.15587 11.6672 8.73595 11.4285C9.31604 11.1899 9.84312 10.8401 10.2871 10.3992C10.7311 9.95824 11.0833 9.43476 11.3235 8.85863C11.5638 8.28251 11.6875 7.66502 11.6875 7.04143C11.6875 6.41784 11.5638 5.80035 11.3235 5.22423C11.0833 4.64811 10.7311 4.12463 10.2871 3.68368C9.84312 3.24273 9.31604 2.89296 8.73595 2.65432C8.15587 2.41568 7.53413 2.29285 6.90625 2.29285C6.27837 2.29285 5.65663 2.41568 5.07654 2.65432C4.49646 2.89296 3.96938 3.24273 3.5254 3.68368C3.08142 4.12463 2.72923 4.64811 2.48895 5.22423C2.24867 5.80035 2.125 6.41784 2.125 7.04143C2.125 7.66502 2.24867 8.28251 2.48895 8.85863C2.72923 9.43476 3.08142 9.95824 3.5254 10.3992C3.96938 10.8401 4.49646 11.1899 5.07654 11.4285C5.65663 11.6672 6.27837 11.79 6.90625 11.79Z"
+                          class="button__icon-path"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">About -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#works" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="21"
+                        height="16"
+                        viewBox="0 0 21 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.2 0.635498C3.04172 0.635498 2.1 1.57078 2.1 2.72115V11.0638H4.2V2.72115H16.8V11.0638H18.9V2.72115C18.9 1.57078 17.9583 0.635498 16.8 0.635498H4.2ZM0.63 12.1066C0.282187 12.1066 0 12.3868 0 12.7323C0 14.114 1.12875 15.2351 2.52 15.2351H18.48C19.8712 15.2351 21 14.114 21 12.7323C21 12.3868 20.7178 12.1066 20.37 12.1066H0.63Z"
+                          class="button__icon-path"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Works -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#skill" class="header__nav-link button">
+                    <span class="button__icon">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.43454 7.15642C8.7598 7.47765 8.7598 8.00275 8.43455 8.32398L3.65356 13.0459C3.13521 13.5578 2.25649 13.1906 2.25649 12.4621L2.25649 3.01832C2.25649 2.28979 3.13521 1.92261 3.65355 2.43454L8.43454 7.15642Z"
+                          class="button__icon-path"
+                        />
+                        <path
+                          d="M15.4089 7.15642C15.7342 7.47765 15.7342 8.00275 15.4089 8.32398L10.6279 13.0459C10.1096 13.5578 9.23085 13.1906 9.23085 12.4621L9.23085 3.01832C9.23085 2.28979 10.1096 1.92261 10.6279 2.43454L15.4089 7.15642Z"
+                          class="button__icon-path"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Skill</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#message" class="header__nav-link button button--bg">
+                    <span class="button__icon">
+                      <svg
+                        width="20"
+                        height="16"
+                        viewBox="0 0 20 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.5 2.28406C2.15625 2.28406 1.875 2.56339 1.875 2.90479V3.76217L8.61328 9.25563C9.42188 9.91515 10.582 9.91515 11.3906 9.25563L18.125 3.76217V2.90479C18.125 2.56339 17.8438 2.28406 17.5 2.28406H2.5ZM1.875 6.17138V12.8365C1.875 13.1779 2.15625 13.4572 2.5 13.4572H17.5C17.8438 13.4572 18.125 13.1779 18.125 12.8365V6.17138L12.5781 10.6949C11.0781 11.917 8.91797 11.917 7.42188 10.6949L1.875 6.17138ZM0 2.90479C0 1.53531 1.12109 0.421875 2.5 0.421875H17.5C18.8789 0.421875 20 1.53531 20 2.90479V12.8365C20 14.2059 18.8789 15.3194 17.5 15.3194H2.5C1.12109 15.3194 0 14.2059 0 12.8365V2.90479Z"
+                          class="button__icon-path button__icon-path--contact"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Massage -</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a
+                    href="#contact"
+                    class="header__nav-link button button--border"
+                  >
+                    <span class="button__icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                          d="M330.6 243.5a36.2 36.2 0 0 1 9.3 0c1.7-3.8 2-10.4 .5-17.6-2.2-10.7-5.3-17.1-11.5-16.1s-6.5 8.7-4.2 19.4c1.3 6 3.5 11.1 6 14.3zM277.1 252c4.5 2 7.2 3.3 8.3 2.1 1.9-1.9-3.5-9.4-12.1-13.1a31.4 31.4 0 0 0 -30.6 3.7c-3 2.2-5.8 5.2-5.4 7.1 .9 3.7 10-2.7 22.6-3.5 7-.4 12.8 1.8 17.3 3.7zm-9 5.1c-9.1 1.4-15 6.5-13.5 10.1 .9 .3 1.2 .8 5.2-.8a37 37 0 0 1 18.7-2c2.9 .3 4.3 .5 4.9-.5 1.5-2.2-5.7-8-15.4-6.9zm54.2 17.1c3.4-6.9-10.9-13.9-14.3-7s10.9 13.9 14.3 7zm15.7-20.5c-7.7-.1-8 15.8-.3 15.9s8-15.8 .3-16zm-218.8 78.9c-1.3 .3-6 1.5-8.5-2.4-5.2-8 11.1-20.4 3-35.8-9.1-17.5-27.8-13.5-35.1-5.5-8.7 9.6-8.7 23.5-5 24.1 4.3 .6 4.1-6.5 7.4-11.6a12.8 12.8 0 0 1 17.9-3.7c11.6 7.6 1.4 17.8 2.3 28.6 1.4 16.7 18.4 16.4 21.6 9a2.1 2.1 0 0 0 -.2-2.3c0 .9 .7-1.3-3.4-.4zm299.7-17.1c-3.4-11.7-2.6-9.2-6.8-20.5 2.5-3.7 15.3-24-3.1-43.3-10.4-10.9-33.9-16.5-41.1-18.5-1.5-11.4 4.7-58.7-21.5-83 20.8-21.6 33.8-45.3 33.7-65.7-.1-39.2-48.2-51-107.4-26.5l-12.6 5.3c-.1-.1-22.7-22.3-23.1-22.6C169.5-18-41.8 216.8 25.8 273.9l14.8 12.5a72.5 72.5 0 0 0 -4.1 33.5c3.4 33.4 36 60.4 67.5 60.4 57.7 133.1 267.9 133.3 322.3 3 1.7-4.5 9.1-24.6 9.1-42.4s-10.1-25.3-16.5-25.3zm-316 48.2c-22.8-.6-47.5-21.2-49.9-45.5-6.2-61.3 74.3-75.3 84-12.3 4.5 29.6-4.7 58.5-34.1 57.8zM84.3 249.6C69.1 252.5 55.8 261.1 47.6 273c-4.9-4.1-14-12-15.6-15-13-24.9 14.2-73 33.3-100.2C112.4 90.6 186.2 39.7 220.4 48.9c5.6 1.6 23.9 22.9 23.9 22.9s-34.2 18.9-65.8 45.4c-42.7 32.9-74.9 80.6-94.2 132.4zM323.2 350.7s-35.7 5.3-69.5-7.1c6.2-20.2 27 6.1 96.4-13.8 15.3-4.4 35.4-13 51-25.4a102.9 102.9 0 0 1 7.1 24.3c3.7-.7 14.3-.5 11.4 18.1-3.3 19.9-11.7 36-25.9 50.8A106.9 106.9 0 0 1 362.6 421a132.5 132.5 0 0 1 -20.3 8.6c-53.5 17.5-108.3-1.7-126-43a66.3 66.3 0 0 1 -3.6-9.7c-7.5-27.2-1.1-59.8 18.8-80.4 1.2-1.3 2.5-2.9 2.5-4.8a8.5 8.5 0 0 0 -1.9-4.5c-7-10.1-31.2-27.4-26.3-60.8 3.5-24 24.5-40.9 44.1-39.9l5 .3c8.5 .5 15.9 1.6 22.9 1.9 11.7 .5 22.2-1.2 34.6-11.6 4.2-3.5 7.6-6.5 13.3-7.5a17.5 17.5 0 0 1 13.6 2.2c10 6.6 11.4 22.7 11.9 34.5 .3 6.7 1.1 23 1.4 27.6 .6 10.7 3.4 12.2 9.1 14 3.2 1.1 6.2 1.8 10.5 3.1 13.2 3.7 21 7.5 26 12.3a16.4 16.4 0 0 1 4.7 9.3c1.6 11.4-8.8 25.4-36.3 38.2-46.7 21.7-93.7 14.5-100.5 13.7-20.2-2.7-31.6 23.3-19.6 41.2 22.6 33.4 122.4 20 151.4-21.4 .7-1 .1-1.6-.7-1-41.8 28.6-97.1 38.2-128.5 26-4.8-1.9-14.7-6.4-15.9-16.7 43.6 13.5 71 .7 71 .7s2-2.8-.6-2.5zm-68.5-5.7zm-83.4-187.5c16.7-19.4 37.4-36.2 55.8-45.6a.7 .7 0 0 1 1 1c-1.5 2.7-4.3 8.3-5.2 12.7a.8 .8 0 0 0 1.2 .8c11.5-7.8 31.5-16.2 49-17.3a.8 .8 0 0 1 .5 1.4 41.9 41.9 0 0 0 -7.7 7.7 .8 .8 0 0 0 .6 1.2c12.3 .1 29.7 4.4 41 10.7 .8 .4 .2 1.9-.6 1.7-69.6-15.9-123.1 18.5-134.5 26.8a.8 .8 0 0 1 -1-1.1z"
+                          class="button__icon-path"
+                        />
+                      </svg>
+                    </span>
+                    <span class="button__text">Contact -</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="fv">
+          <picture class="fv__img">
+            <source media="(min-width: 768px)" srcset="./img/img_fv.png" />
+            <img src="./img/sp/img_fv.png" alt="" />
+          </picture>
+          <div class="fv__contents">
+            <h1 class="fv__heading">
+              <span class="fv__heading-main">- Toki's Portfolio -</span>
+              <span class="fv__heading-sub"
+                >ご覧いただきありがとうございます。<br />こちらはポートフォリオサイトになります。<br />
+                どうぞゆっくりご覧くださいませ。</span
+              >
+            </h1>
+          </div>
+        </div>
+
+        <section id="about" class="section about">
+          <div class="section__inner">
+            <div class="about__container">
+              <div class="about__img slide-in">
+                <img src="./img/img_about.png" alt="" />
+                <p class="about__name">Tokimasa Koda / 甲田時將</p>
+              </div>
+              <div class="about__text-contents">
+                <h2 class="section__head">
+                  <span class="section__head-main">
+                    <span class="section__head-main__slide"> About - </span>
+                  </span>
+                  <span class="section__head-sub slide-in">私について</span>
+                </h2>
+                <p class="about__text slide-in">
+                  　三重県出身、22歳の大学生です。大学では生体用インプラント材料に関する研究を行っています。<br />　
+                  ITに興味を持ち、大学3年生から自己学習を始め、1年間の業務委託でHTML/CSSを活用した経験を積みました。その後、さらなる成長を目指し、<span
+                    class="text_red"
+                    >フィリピン留学</span
+                  >
+                  を決意し、現在はそこでITスキルの向上に努めています。新しい技術を学びながら、日々成長する喜びを感じています。
+                </p>
+              </div>
+            </div>
+
+            <div class="section__contents">
+              <ul class="about__list">
+                <li class="about__item slide-in">
+                  <div class="about__item-img">
+                    <h2 class="about__item-img__title">TRAVEL</h2>
+                    <div class="about__item-img__travel active">
+                      <img
+                        src="./img/img_about_travel1.jpg"
+                        alt="フィリピン画像"
+                      />
+                    </div>
+                    <div class="about__item-img__travel">
+                      <img
+                        src="./img/img_about_travel2.jpg"
+                        alt="草津温泉画像"
+                      />
+                    </div>
+                    <div class="about__item-img__travel">
+                      <img
+                        src="./img/img_about_travel3.jpg"
+                        alt="キャンプ画像"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="about__item-name">
+                    <div class="about__item-name__travel active">
+                      <h3>ボホール島</h3>
+                    </div>
+                    <div class="about__item-name__travel">
+                      <h3>草津温泉</h3>
+                    </div>
+                    <div class="about__item-name__travel">
+                      <h3>キャンプ</h3>
+                    </div>
+                  </div>
+
+                  <p class="about__item-text">
+                    長期の休みがある時は、キャンプや温泉などの自然を感じながらリラックスできるところに旅行に行くことが多いです。
+                  </p>
+                </li>
+
+                <li class="about__item slide-in">
+                  <div class="about__item-img">
+                    <h2 class="about__item-img__title">HOBBY</h2>
+                    <div class="about__item-img__hobby active">
+                      <img src="./img/img_about_hobby1.jpg" alt="温泉画像" />
+                    </div>
+                    <div class="about__item-img__hobby">
+                      <img src="./img/img_about_hobby2.jpg" alt="古着屋画像" />
+                    </div>
+                    <div class="about__item-img__hobby">
+                      <img src="./img/img_about_hobby3.jpg" alt="ラジオ画像" />
+                    </div>
+                  </div>
+
+                  <div class="about__item-name">
+                    <div class="about__item-name__hobby active">
+                      <h3>温泉</h3>
+                    </div>
+                    <div class="about__item-name__hobby">
+                      <h3>古着屋</h3>
+                    </div>
+                    <div class="about__item-name__hobby">
+                      <h3>ラジオ</h3>
+                    </div>
+                  </div>
+
+                  <p class="about__item-text">
+                    大学3年生のときに古着にハマり、週末や学校終わりなどに古着や巡りをすることが好きです！古着屋でのアルバイトも1年間経験しました。
+                  </p>
+                </li>
+
+                <li class="about__item slide-in">
+                  <div class="about__item-img">
+                    <h2 class="about__item-img__title">SPORT</h2>
+                    <div class="about__item-img__sport active">
+                      <img
+                        src="./img/img_about_sport1.jpg"
+                        alt="サッカー画像"
+                      />
+                    </div>
+                    <div class="about__item-img__sport">
+                      <img
+                        src="./img/img_about_sport2.jpg"
+                        alt="マラソン画像"
+                      />
+                    </div>
+                    <div class="about__item-img__sport">
+                      <img src="./img/img_about_sport3.jpg" alt="筋トレ画像" />
+                    </div>
+                  </div>
+
+                  <div class="about__item-name">
+                    <div class="about__item-name__sport active">
+                      <h3>サッカー</h3>
+                    </div>
+                    <div class="about__item-name__sport">
+                      <h3>マラソン</h3>
+                    </div>
+                    <div class="about__item-name__sport">
+                      <h3>筋トレ</h3>
+                    </div>
+                  </div>
+
+                  <p class="about__item-text">
+                    小学1年生から14年間サッカーに打ち込みました。また、大学4年生の冬には、研究室のメンバー全員で富山マラソンに出場し、見事に完走することができました！
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="works" class="section works">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">
+                <span class="section__head-main__slide"> Works - </span>
+              </span>
+              <span class="section__head-sub slide-in">実績紹介</span>
+            </h2>
+            <p class="section__lead-text slide-in">
+              これまで制作したWebサイトです。また、当サイトも自ら制作していますので実績の一つとして御覧ください。
+            </p>
+            <div class="section__contents">
+              <ul class="works__list">
+                <li class="works__item slide-in">
+                  <div class="works__item-img">
+                    <img
+                      src="./img/img_work1.png"
+                      alt="ポートフォリオサイト画像"
+                    />
+                  </div>
+                  <h3 class="works__item-name">ポートフォリオサイト</h3>
+                  <p class="works__item-text">HTML/CSS/JQuery</p>
+                  <a href="#" target="_blank" class="works__item-link"
+                    >Read More</a
+                  >
+                </li>
+                <li class="works__item slide-in">
+                  <div class="works__item-img">
+                    <img
+                      src="./img/img_work2.png"
+                      alt="Libraryデモサイト画像"
+                    />
+                  </div>
+                  <h3 class="works__item-name">Libraryデモサイト</h3>
+                  <p class="works__item-text">HTML/CSS/Bootstrap/Laravel</p>
+                  <a href="#" target="_blank" class="works__item-link"
+                    >Read More</a
+                  >
+                </li>
+                <li class="works__item slide-in">
+                  <div class="works__item-img">
+                    <img
+                      src="./img/img_work3.png"
+                      alt="Instagramデモサイト画像"
+                    />
+                  </div>
+                  <h3 class="works__item-name">Instagramデモサイト</h3>
+                  <p class="works__item-text">HTML/CSS/Bootstrap/Laravel</p>
+                  <a href="#" target="_blank" class="works__item-link"
+                    >Read More</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="skill" class="section skill">
+          <div class="section__inner">
+            <h2 class="section__head">
+              <span class="section__head-main">
+                <span class="section__head-main__slide"> Skills - </span>
+              </span>
+              <span class="section__head-sub slide-in">技術紹介</span>
+            </h2>
+            <p class="section__lead-text slide-in">
+              これまで習得したスキルになります。<i
+                class="fa-solid fa-triangle-exclamation"
+              ></i>
+              実務経験はございません。
+            </p>
+            <div class="section__contents">
+              <ol class="skill__list">
+                <li class="skill__item slide-in">
+                  <p class="skill__item-num">1</p>
+                  <div class="skill__item-img__flex">
+                    <img src="./img/img_skill_html.png" alt="" />
+                    <img src="./img/img_skill_css.png" alt="" />
+                  </div>
+                  <h3 class="skill__item-name">HTML/CSS</h3>
+                  <p class="skill__item-text">
+                    ・レスポンシブデザイン<br />
+                    ・Sassを使用したコードの管理<br />
+                    ・Bootstrapの活用
+                  </p>
+                </li>
+                <li class="skill__item slide-in">
+                  <p class="skill__item-num">2</p>
+                  <div class="skill__item-img">
+                    <img src="./img/img_skill_javascript.png" alt="" />
+                  </div>
+                  <h3 class="skill__item-name">Javascript</h3>
+                  <p class="skill__item-text">
+                    ・動的な機能の実装<br />
+                    ・JQueryの活用
+                  </p>
+                </li>
+                <li class="skill__item slide-in">
+                  <p class="skill__item-num">3</p>
+                  <div class="skill__item-img__flex">
+                    <img src="./img/img_skill_php.png" alt="" />
+                    <img src="./img/img_skill_laravel.png" alt="" />
+                  </div>
+                  <h3 class="skill__item-name">php/laravel</h3>
+                  <p class="skill__item-text">
+                    ・オブジェクト指向(OOP)<br />
+                    ・Laravelフレームワークの活用<br />
+                    ・認証機能<br />
+                    ・CRUD機能の実装
+                  </p>
+                </li>
+                <li class="skill__item slide-in">
+                  <p class="skill__item-num">4</p>
+                  <div class="skill__item-img">
+                    <img src="./img/img_skill_mysql.png" alt="" />
+                  </div>
+                  <h3 class="skill__item-name">My SQL</h3>
+                  <p class="skill__item-text">・My SQLによるデータ管理</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section id="message" class="section message">
+          <div class="section__inner">
+            <div class="message__container">
+              <div class="message__text-contents">
+                <h2 class="section__head">
+                  <span class="section__head-main">
+                    <span class="section__head-main__slide"> Massage - </span>
+                  </span>
+                  <span class="section__head-sub slide-in"
+                    >企業関係者の皆様へ</span
+                  >
+                </h2>
+                <p class="message__text slide-in">この度はポートフォリオをご覧いただき、誠にありがとうございます。
+                  <br />
+                  <br />私はこれまで大きな目標を持たず、安定した道を歩んできましたが、具体的な目標を立て、それに向かって行動を起こすことで、ここ数年で私の人生は大きく変わりました。現在、
+                  <span class="text_red" >
+                    <strong >刺激的な環境に身を置きながら、日々自己成長を実感しております。</strong >
+                  </span >
+                  <br />
+                  <br />成長のセカンドステップとして、インターンシップでは環境にこだわりたいと考えております。また、ITスキルを向上させるだけでなく、そのスキルをどのように活用していくのかも学びたいという思いから、企画から設計、開発までを網羅している貴社に魅力を感じました。
+                  <br />
+                  <br />特に、貴社の個人の能力にフォーカスした企業理念に最も惹かれています。貴社のクリエイティブな環境と多くの未知の経験を通じて能力の向上に努めるとともに、私の長所である適応力と分析力を活かして、個人の能力を貴社に還元したいと考えています。
+                  <br />
+                  <br />このポートフォリオを通じて、私の貴社への熱意が伝わることを祈っております。 
+                  <strong >最後までお読みいただき、ありがとうございました。</strong >
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-bottom">
+          <div class="page-bottom__item" id="contact">
+            <h2 class="section__head section__head--center">
+              <span class="section__head-main"> - Contact - </span>
+              <span class="section__head-sub">お問い合わせ</span>
+            </h2>
+            <p class="page-bottom__item-text">
+              <i class="fa-regular fa-envelope"></i> tokihide121062@gmail.com
+            </p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <small class="footer__copy"
+            >&copy; Toki's Portfolio All rights reserved.</small
+          >
+        </footer>
+      </main>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

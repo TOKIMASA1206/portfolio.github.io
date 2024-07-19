@@ -32,10 +32,11 @@ $(document).ready(function () {
       scrollTop: $(target).offset().top - 40
     }, 500);
 
-
-    $("#js-button-drawer").removeClass("is-checked");
-    $("#js-drawer").slideUp();
-    $("body").removeClass("is-fixed");
+    if ($(window).width() <= 768) {
+      $("#js-button-drawer").removeClass("is-checked");
+      $("#js-drawer").slideUp();
+      $("body").removeClass("is-fixed");
+    }
   });
 });
 

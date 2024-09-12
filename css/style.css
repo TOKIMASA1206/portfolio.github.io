@@ -281,7 +281,6 @@ body.is-fixed {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 8%;
-  margin-bottom: 150px;
 }
 .works__item-img {
   margin-bottom: 16px;
@@ -307,6 +306,45 @@ body.is-fixed {
 .works__item-link {
   text-decoration: underline;
   font-size: 18px;
+  color: #145DA0;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.ongoing-projects {
+  background-color: #fafafa;
+}
+.ongoing-projects h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #051D40;
+}
+.ongoing-projects__item {
+  margin-top: 70px;
+}
+.ongoing-projects__item-img {
+  margin-bottom: 16px;
+}
+.ongoing-projects__item-img img {
+  -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.ongoing-projects__item-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.ongoing-projects__item-text {
+  margin-bottom: 15px;
+}
+.ongoing-projects__item-link {
+  text-decoration: underline;
+  font-size: 20px;
   color: #145DA0;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -593,6 +631,36 @@ body.is-fixed {
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   }
   .works__item-link:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  .ongoing-projects__item {
+    margin-top: 70px;
+  }
+  .ongoing-projects__item-link {
+    position: relative;
+    text-decoration: none;
+  }
+  .ongoing-projects__item-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #145DA0;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .ongoing-projects__item-link:hover::after {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
     -webkit-transform-origin: left;
